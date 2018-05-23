@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6500 64-bit) (preloaded format=xelatex 2017.12.13)  22 MAY 2018 21:00
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6500 64-bit) (preloaded format=xelatex 2017.12.13)  23 MAY 2018 16:52
 entering extended mode
-**./resume.tex
-(resume.tex
+**./resume.ltx
+(resume.ltx
 LaTeX2e <2017-04-15>
 Babel <3.15> and hyphenation patterns for 75 language(s) loaded.
 (awesome-cv.cls
@@ -1263,15 +1263,4 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
  (resume.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 115.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 115.
- ) 
-Here is how much of TeX's memory you used:
- 37875 strings out of 427839
- 736778 string characters out of 3152537
- 942607 words of memory out of 3000000
- 41380 multiletter control sequences out of 15000+200000
- 532722 words of font info for 82 fonts, out of 3000000 for 9000
- 1328 hyphenation exceptions out of 8191
- 72i,11n,89p,10427b,786s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on resume.pdf (1 page).
+Package atveryend Info: Empty hoo
