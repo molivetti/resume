@@ -1,22 +1,3 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for Cover Letter
-%
-% This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
-%
-% Authors:
-% Claud D. Park <posquit0.bj@gmail.com>
-% Lars Richter <mail@ayeks.de>
-%
-% Adapted by:
-% Matthew Olivetti <matthewolivetti@gmail.com>
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-%
-
-
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
@@ -44,7 +25,7 @@
 % \definecolor{lighttext}{HTML}{999999}
 
 % Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{false}
+\setbool{acvSectionColorHighlight}{true}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -55,10 +36,10 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-\photo[circle,edge,left]{profile}
+% \photo{profile.png}
 \name{Matthew}{Olivetti}
 \position{Software Engineer{\enskip\cdotp\enskip}Web Developer}
-% \address{121 Hanna Street, Carrboro NC 27510}
+\address{121 Hanna Street, Carrboro NC 27510}
 
 \mobile{843-301-1744}
 \email{matthewolivetti@gmail.com}
@@ -76,61 +57,33 @@
 
 
 %-------------------------------------------------------------------------------
-%	LETTER INFORMATION
-%	All of the below lines must be filled out
-%-------------------------------------------------------------------------------
-% The company being applied to
-\recipient
-  {COMPANY Recruitment Team}
-  {COMPANY, Inc.\\ADDRESS1\\ADDRESS2}
-% The date on the letter, default is the date of compilation
-\letterdate{\today}
-% The title of the letter
-\lettertitle{Job Application for POSITION}
-% How the letter is opened
-\letteropening{Dear Hiring Manager,}
-% How the letter is closed
-\letterclosing{Sincerely,}
-% Any enclosures with the letter
-\letterenclosure[Attached]{Curriculum Vitae}
-
-
-%-------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[R]
+\makecvheader
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Matthew Olivetti~~~·~~~Cover Letter}
-  {}
-
-% Print the title with above letter informations
-\makelettertitle
-
-%-------------------------------------------------------------------------------
-%	LETTER CONTENT
-%-------------------------------------------------------------------------------
-\begin{cvletter}
-
-\lettersection{About Me}
-About me goes here.
-
-\lettersection{Why COMPANY?}
-Why COMPANY goes here.
-
-\lettersection{Why Me?}
-Why me goes here.
-
-\end{cvletter}
+  {Matthew Olivetti~~~·~~~Curriculum Vitae}
+  {\thepage}
 
 
 %-------------------------------------------------------------------------------
-% Print the signature and enclosures with above letter informations
-\makeletterclosing
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{cv/education.tex}
+\input{cv/skills.tex}
+\input{cv/experience.tex}
+\input{cv/extracurricular.tex}
+\input{cv/honors.tex}
+\input{cv/presentation.tex}
+\input{cv/writing.tex}
+\input{cv/committees.tex}
 
+
+%-------------------------------------------------------------------------------
 \end{document}

@@ -58,10 +58,10 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{profile}
-\name{Matthew Olivetti}{}
+\photo[circle,edge,left]{profile}
+\name{Matthew}{Olivetti}
 \position{Software Engineer{\enskip\cdotp\enskip}Web Developer}
-\address{121 Hanna Street, Carrboro NC 27510}
+% \address{121 Hanna Street, Carrboro NC 27510}
 
 \mobile{843-301-1744}
 \email{matthewolivetti@gmail.com}
@@ -83,7 +83,7 @@
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[C]
+\makecvheader[R]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
@@ -98,13 +98,16 @@
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{cv/skills.tex}
+% \vspace{5mm}
 %/ \input{resume/summary.tex}
 \input{resume/experience.tex}
+% \vspace{5mm}
 %/ \input{resume/honors.tex}
 %/ \input{resume/presentation.tex}
 %/ \input{resume/writing.tex}
 %/ \input{resume/committees.tex}
 \input{resume/education.tex}
+% \vspace{5mm}
 \input{resume/extracurricular.tex}
 
 

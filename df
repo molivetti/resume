@@ -1,0 +1,103 @@
+warning: LF will be replaced by CRLF in awesome-cv.cls.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in coverletter.tex.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in resume.tex.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in resume/education.tex.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in resume/experience.tex.
+The file will have its original line endings in your working directory.
+[1mdiff --git a/awesome-cv.cls b/awesome-cv.cls[m
+[1mindex 8725833..f9ef95a 100644[m
+[1m--- a/awesome-cv.cls[m
+[1m+++ b/awesome-cv.cls[m
+[36m@@ -411,7 +411,7 @@[m
+     \ifthenelse{\isundefined{\@photo}}{}{%[m
+       \newlength{\photodim}[m
+       \ifthenelse{\equal{\@photoshape}{circle}}%[m
+[31m-        {\setlength{\photodim}{1.3cm}}%[m
+[32m+[m[32m        {\setlength{\photodim}{1.8cm}}%[m
+         {\setlength{\photodim}{1.8cm}}%[m
+       \ifthenelse{\equal{\@photoedge}{edge}}%[m
+         {\def\@photoborder{darkgray}}%[m
+[1mdiff --git a/coverletter.tex b/coverletter.tex[m
+[1mindex bb0ea94..a04bf97 100644[m
+[1m--- a/coverletter.tex[m
+[1m+++ b/coverletter.tex[m
+[36m@@ -55,7 +55,7 @@[m
+ %	Comment any of the lines below if they are not required[m
+ %-------------------------------------------------------------------------------[m
+ % Available options: circle|rectangle,edge/noedge,left/right[m
+[31m-\photo[circle,noedge,left]{profile}[m
+[32m+[m[32m\photo[circle,edge,left]{profile}[m
+ \name{Matthew}{Olivetti}[m
+ \position{Software Engineer{\enskip\cdotp\enskip}Web Developer}[m
+ \address{121 Hanna Street, Carrboro NC 27510}[m
+[1mdiff --git a/profile.png b/profile.png[m
+[1mindex b04f502..d980188 100644[m
+Binary files a/profile.png and b/profile.png differ
+[1mdiff --git a/resume.tex b/resume.tex[m
+[1mindex b1d2a2b..9d6e3cd 100644[m
+[1m--- a/resume.tex[m
+[1m+++ b/resume.tex[m
+[36m@@ -59,7 +59,7 @@[m
+ %-------------------------------------------------------------------------------[m
+ % Available options: circle|rectangle,edge/noedge,left/right[m
+ % \photo[rectangle,edge,right]{profile}[m
+[31m-\name{Matthew}{Olivetti}[m
+[32m+[m[32m\name{Matthew Olivetti}{}[m
+ \position{Software Engineer{\enskip\cdotp\enskip}Web Developer}[m
+ \address{121 Hanna Street, Carrboro NC 27510}[m
+ [m
+[1mdiff --git a/resume/education.tex b/resume/education.tex[m
+[1mindex bf4db5a..3164149 100644[m
+[1m--- a/resume/education.tex[m
+[1m+++ b/resume/education.tex[m
+[36m@@ -18,7 +18,6 @@[m
+     {[m
+       \begin{cvitems} % Description(s) bullet points[m
+         \item {Specialization: \keyword{Cybersecurity}}[m
+[31m-        \item {My article investigating security risks caused by Comcast, "\keyword{Xfinity: Why We Should Have Trust Issues}" was published in the campus magazine.}[m
+       \end{cvitems}[m
+     }[m
+ [m
+[1mdiff --git a/resume/experience.tex b/resume/experience.tex[m
+[1mindex e7bc07c..06a351b 100644[m
+[1m--- a/resume/experience.tex[m
+[1m+++ b/resume/experience.tex[m
+[36m@@ -13,17 +13,17 @@[m
+   \cventry[m
+     {Software Engineer} % Job title[m
+     {Cavulus} % Organization[m
+[31m-    {Remote} % Location[m
+[32m+[m[32m    {Hilton Head Island, SC} % Location[m
+     {Aug. 2015 - Nov. 2017} % Date(s)[m
+     {[m
+       \begin{cvitems} % Description(s) of tasks/responsibilities[m
+         \item {\keyword{Full stack} web developer on agile development team that implemented new features and resolved issues for flagship web application.}[m
+         \item {Applied front-end framework \keyword{Bootstrap} to \keyword{37\%} of our application.}[m
+         \item {Implemented \keyword{JavaScript} library \keyword{DataTables} to \keyword{100\%} of our high-volume tables for enhanced functionality.}[m
+[31m-        \item {Developed and maintained automated monthly billing report tool used company-wide. Involved bulk inserting web-scraped CSV files to \keyword{MySQL server} followed by executing \keyword{SQL} commands to generate a custom formatted Google Docs spreadsheet.}[m
+[31m-        \item {Reduced \keyword{SQL} query run time by \keyword{64\%} for \keyword{big data} contingent core functionality composed of protected health information.}[m
+[32m+[m[32m        \item {Developed and maintained automated monthly billing report tool used company-wide. Involved bulk inserting web-scraped CSV files to \keyword{MySQL server} and generating a custom formatted Google Docs spreadsheet.}[m
+[32m+[m[32m        \item {Reduced query run time by \keyword{64\%} for \keyword{big data} contingent core functionality composed of protected health information.}[m
+         \item {Oversaw performance and scalability of several high volume EDI processes resulting in \keyword{44\%} execution time improvement.}[m
+[31m-        \item {Refined loading times by \keyword{32\%} of our application’s most accessed pages using asynchronous \keyword{AJAX} calls, \keyword{jQuery}, and \keyword{SQL}.}[m
+[32m+[m[32m        \item {Refined loading times by \keyword{32\%} of our application’s most accessed pages using \keyword{AJAX} calls, \keyword{jQuery}, and \keyword{SQL}.}[m
+         \item {Trained and helped new team members with their development environments and understanding company business logic.}[m
+         \item {Involved with team's transition to utilizing \keyword{Git}, \keyword{Jira}, and \keyword{Amazon Web Services}.}[m
+       \end{cvitems}[m
+[36m@@ -37,9 +37,9 @@[m
+     {Sept. 2013 - Aug. 2015} % Date(s)[m
+     {[m
+       \begin{cvitems} % Description(s) of tasks/responsibilities[m
+[31m-        \item {Built interactive map that visually compared all American counties based on healthcare plan enrollment. Incorporated \keyword{JavaScript}, \keyword{ColdFusion}, \keyword{Bootstrap}, asynchronous \keyword{Ajax} calls, \keyword{MySQL server}, \keyword{d3.js}, \keyword{jQuery} and various \keyword{JavaScript} libraries.}[m
+[31m-        \item {Updated company website for responsiveness and cross browser compatibility using \keyword{Bootstrap}, \keyword{HTML5}, and \keyword{CSS3}.}[m
+[31m-        \item {Coded cross-browser compatible form with client-side \& server-side validation using \keyword{JavaScript}, \keyword{ColdFusion}, \keyword{Bootstrap}, \keyword{MySQL server} and a SFTP server.}[m
+[32m+[m[32m        \item {Built interactive map that visually compared all American counties based on healthcare plan enrollment. Incorporated JavaScript, \keyword{ColdFusion}, Bootstrap, \keyword{AJAX} calls, MySQL server, \keyword{d3.js}, jQuery and various JavaScript libraries.}[m
+[32m+[m[32m        \item {Updated company website for responsiveness and cross browser compatibility using Bootstrap, \keyword{HTML5}, and \keyword{CSS3}.}[m
+[32m+[m[32m        \item {Coded cross-browser compatible form with client-side \& server-side validation using JavaScript, ColdFusion, Bootstrap, MySQL server and SFTP servers.}[m
+       \end{cvitems}[m
+     }[m
+ [m
