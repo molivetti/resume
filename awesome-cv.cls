@@ -194,11 +194,11 @@
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{graytext} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{36pt}{1em}\headerfontlight\color{graytext} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\fontsize{36pt}{1em}\headerfont\bfseries\color{text} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\newcommand*{\headeraddressstyle}[1]{{\fontsize{0pt}{1em}\headerfont\itshape\color{lighttext} #1}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{9.2pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
@@ -373,9 +373,9 @@
 %% Define helper macros a user can change easily
 % Header
 \newcommand{\acvHeaderNameDelim}{\space}
-\newcommand{\acvHeaderAfterNameSkip}{.4mm}
-\newcommand{\acvHeaderAfterPositionSkip}{.4mm}
-\newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
+\newcommand{\acvHeaderAfterNameSkip}{1.6mm}
+\newcommand{\acvHeaderAfterPositionSkip}{1mm}
+\newcommand{\acvHeaderAfterAddressSkip}{0mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 \newcommand{\acvHeaderAfterSocialSkip}{6mm}
@@ -383,7 +383,7 @@
 
 % Others
 \newcommand{\acvSectionTopSkip}{3mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvSectionContentTopSkip}{2mm}
 
 
 %-------------------------------------------------------------------------------
@@ -411,8 +411,8 @@
     \ifthenelse{\isundefined{\@photo}}{}{%
       \newlength{\photodim}
       \ifthenelse{\equal{\@photoshape}{circle}}%
-        {\setlength{\photodim}{1.8cm}}%
-        {\setlength{\photodim}{1.8cm}}%
+        {\setlength{\photodim}{1.5cm}}%
+        {\setlength{\photodim}{1.5cm}}%
       \ifthenelse{\equal{\@photoedge}{edge}}%
         {\def\@photoborder{darkgray}}%
         {\def\@photoborder{none}}%
@@ -605,6 +605,25 @@
       {}
       {\multicolumn{2}{L{17.0cm}}{\subdescriptionstyle{#4}} \\}
   \end{tabular*}
+}
+
+% Define an environment for cveducation
+\newenvironment{cveducations}{%
+  \vspace{\acvSectionContentTopSkip}
+  \begin{center}
+}{%
+  \end{center}
+}
+% Define an education
+% Usage: \cveducation{<degree>}{<institution>}{<location>}{<date>}{<description>}
+\newcommand*{\cveducation}[5]{%
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4cm} R{4cm}}
+    \entrytitlestyle{#1} \entrypositionstyle{#2} & \entrylocationstyle{#3} \\
+    \descriptionstyle{#5} & \entrydatestyle{#4} \\
+  \end{tabular*}%
+  \vspace{-2.0mm}
 }
 
 % Define an environment for cvhonor
