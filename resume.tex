@@ -24,7 +24,7 @@
 \documentclass[11pt, a4paper]{awesome-cv}
 
 % Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\geometry{left=.63in, top=.53in, right=.63in, bottom=.63in, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -77,27 +77,26 @@
 
 %/ \quote{``Be the change that you want to see in the world."}
 
-
 %-------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
 \makecvheader[R]
-
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
   {Matthew Olivetti~~~·~~~Résumé}
-  {\thepage}
-
+%  {\thepage}
+	{}
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/skills.tex}
+% \input{resume/keySkills.tex}
+\input{resume/technicalSkills.tex}
 % \vspace{5mm}
 %/ \input{resume/summary.tex}
 \input{resume/experience.tex}
