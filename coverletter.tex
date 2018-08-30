@@ -24,7 +24,7 @@
 \documentclass[11pt, a4paper]{awesome-cv}
 
 % Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\geometry{left=.63in, top=.63in, right=.63in, bottom=.63in, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -44,7 +44,7 @@
 % \definecolor{lighttext}{HTML}{999999}
 
 % Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{false}
+\setbool{acvSectionColorHighlight}{true}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -55,10 +55,10 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-\photo[circle,edge,left]{profile}
+% \photo[circle,edge,left]{profile}
 \name{Matthew}{Olivetti}
-\position{Software Engineer{\enskip\cdotp\enskip}Web Developer}
-% \address{121 Hanna Street, Carrboro NC 27510}
+\position{Full-Stack Web Developer{\enskip\cdotp\enskip}M.S. Cybersecurity}
+\address{805 W Moorhead Cir Apt C, Boulder CO 80305}
 
 \mobile{843-301-1744}
 \email{matthewolivetti@gmail.com}
@@ -81,18 +81,18 @@
 %-------------------------------------------------------------------------------
 % The company being applied to
 \recipient
-  {COMPANY Recruitment Team}
-  {COMPANY, Inc.\\ADDRESS1\\ADDRESS2}
+  {Carbon Black Recruitment Team}
+  {Carbon Black, Inc.\\1433 Pearl Street\\Boulder, CO 80302}
 % The date on the letter, default is the date of compilation
 \letterdate{\today}
 % The title of the letter
-\lettertitle{Job Application for POSITION}
+\lettertitle{Job Application for Threat Full Stack Application Engineer}
 % How the letter is opened
 \letteropening{Dear Hiring Manager,}
 % How the letter is closed
 \letterclosing{Sincerely,}
 % Any enclosures with the letter
-\letterenclosure[Attached]{Curriculum Vitae}
+% \letterenclosure[Attached]{Curriculum Vitae}
 
 
 %-------------------------------------------------------------------------------
@@ -100,7 +100,7 @@
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[R]
+\makecvheader[C]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
@@ -117,17 +117,27 @@
 %-------------------------------------------------------------------------------
 \begin{cvletter}
 
-\lettersection{About Me}
-About me goes here.
+With five years of hands-on experience efficiently coding websites and applications focused on big data visualization using modern web technologies (HTML5, CSS3, and JavaScript), I offer the technical expertise for your full-stack web application developer position advertised on your website. 
 
-\lettersection{Why COMPANY?}
-Why COMPANY goes here.
+Since earning my M.S. in Cybersecurity, I have served as a full-stack web developer at Cavulus, provider of the premier member acquisition software and technology-enabled service solutions to the health insurance industry. In this position, I have contributed to the development of front-end applications using modern web technologies by having led web development projects that generate usable and beautiful ways that present timely and voluminous amounts of sensitive healthcare data.
 
-\lettersection{Why Me?}
-Why me goes here.
+With a lifelong fascination with cybersecurity, I bring to the table a motivated, passionate employee who will deliver by always taking initiative. The Carbon Black suite of cybersecurity products are held to a high esteem, and the opportunity to build and extend its capabilities excites me. 
+
+Please review my résumé, which provides details of these projects and examples of skills in:
+
+\begin{itemize}
+	\item JavaScript expertise and working knowledge of Node.js and Angular.
+	\item Analytics \& data visualization experience. Numerous projects successfully delivered using D3.js, DataTables, Bootstrap, jQuery UI, HighchartsJS, etc.
+	\item Responsive web development using Bootstrap, Chrome DevTools' Device Mode, Microsoft IE Virtual Machines
+	\item Familiarity with modern project management tooling. Using Git on the command line npm.
+	\item Full stack experience improving load time through SQL refactoring of relational databases storing highly voluminous amounts of sensitive data.
+\end{itemize}
+
+      
+As a free-lance web developer focused on customer satisfaction by working closely with my clients, I manage all aspects of web development from concept to requirements definition, design, development, launch, maintenance and user support. I enjoy the client-facing role and working closely with team members to produce high-quality deliverables.
+I look forward to learning more about the position. If my skills match your requirements, please contact me at (843) 301-1744 or matthewolivetti@gmail.com to schedule a meeting. Thank you.
 
 \end{cvletter}
-
 
 %-------------------------------------------------------------------------------
 % Print the signature and enclosures with above letter informations
