@@ -569,7 +569,7 @@
 \newcommand*{\cventry}[5]{%
   % \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{2pt}
+  \setlength{\extrarowheight}{1pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \ifempty{#2#3}
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
@@ -661,7 +661,7 @@
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
-  \vspace{-4.0mm}
+  \vspace{-5.0mm}
   \begin{justify}
 % \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
   \begin{itemize}[leftmargin=2ex]
@@ -672,7 +672,7 @@
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{-4.0mm}
+  \vspace{-5.0mm}
 }
 
 
