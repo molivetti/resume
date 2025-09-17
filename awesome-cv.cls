@@ -388,8 +388,10 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{0mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{1mm}
-\newcommand{\acvSectionContentTopSkip}{0mm}
+% \newcommand{\acvSectionTopSkip}{3.5mm}
+% \newcommand{\acvSectionContentTopSkip}{0mm}
+\newcommand{\acvSectionTopSkip}{0mm}
+\newcommand{\acvSectionContentTopSkip}{-1mm}
 
 
 %-------------------------------------------------------------------------------
@@ -488,7 +490,7 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.linkedin.com/in/\@linkedin}{\headersocialiconstyle{\faLinkedinSquare}\acvHeaderIconSep\@linkedin}%
+          \href{https://www.linkedin.com/in/\@linkedin}{\headersocialiconstyle{\faLinkedinSquare}\acvHeaderIconSep \@linkedin}%
         }%
       \ifthenelse{\isundefined{\@twitter}}%
         {}%
@@ -554,7 +556,6 @@
 % Define a paragraph for CV
 \newenvironment{cvparagraph}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-3mm}
   \paragraphstyle
 }{%
   \par
@@ -571,9 +572,8 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
-  \vspace{-1.0mm}
   \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
+  \setlength{\extrarowheight}{-1pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \ifempty{#2#3}
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
@@ -581,8 +581,9 @@
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     \ifstrempty{#5}
       {}
-      {\multicolumn{2}{L{\textwidth}}{\vspace{1.0mm}\descriptionstyle{#5}} \\}
+      {\multicolumn{2}{L{\textwidth}}{\vspace{1.0mm}\descriptionstyle{#5}}}
   \end{tabular*}%
+  \vspace{-1.5mm}
 }
 
 % Define an environment for cvsubentry
@@ -620,19 +621,18 @@
 % Usage: \cveducation{<degree>}{<institution>}{<location>}{<date>}{<description>}
 \newcommand*{\cveducation}[5]{%
   \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
+  \setlength{\extrarowheight}{-1pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 3cm} R{3cm}}
     \educationtitlestyle{#1} & \entrylocationstyle{#3} \\
     \entrypositionstyle{#2} & \entrydatestyle{#4} \\
-    \descriptionstyle{#5} \\
+    \descriptionstyle{#5}
   \end{tabular*}%
-  \vspace{-1.0mm}
+  \vspace{-2mm}
 }
 
 % Define an environment for cvhonor
 \newenvironment{cvhonors}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2mm}
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
@@ -648,13 +648,14 @@
 }
 
 % Define an environment for cvskill
-\newenvironment{cvskills}{%
+% Optional parameter for text alignment of left column, defaults to 'r'
+\newenvironment{cvskills}[1][r]{%
   \vspace{\acvSectionContentTopSkip}
   \vspace{-2.0mm}
   \begin{center}
     \setlength\tabcolsep{.5ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} #1 L{\textwidth * \real{0.9}}}
 }{%
     \end{tabular*}
   \end{center}
@@ -669,7 +670,7 @@
 \newenvironment{cvitems}{%
   \vspace{-4.5mm}
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, itemsep=.8mm]
+  \begin{itemize}[leftmargin=2ex, itemsep=.5mm]
     % \setlength\itemsep{.5mm}
     \renewcommand{\labelitemi}{\bullet}
 }{%
@@ -691,24 +692,25 @@
 % Define a section for the cover letter
 % Usage: \lettersection{<section-title>}
 \newcommand{\lettersection}[1]{%
-  \par\addvspace{2.5ex}
+  \vspace{4mm}
   \phantomsection{}
   \lettersectionstyle{#1}
   \color{gray}\vhrulefill{0.9pt}
-  \par\nobreak\addvspace{0.4ex}
+  \par\nobreak\addvspace{-2mm}
 }
 
 % Define a title of the cover letter
 % Usage: \makelettertitle
 \newcommand*{\makelettertitle}{%
-  \vspace{8.4mm}
+  \vspace{5mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \recipienttitlestyle{\@recipientname} & \letterdatestyle{\@letterdate}
   \end{tabular*}
+  \vspace{-6mm}
   \begin{singlespace}
-    \recipientaddressstyle{\@recipientaddress} \\\\
+    \recipientaddressstyle{\@recipientaddress} \\
   \end{singlespace}
   \ifthenelse{\isundefined{\@lettertitle}}
     {}
@@ -720,8 +722,8 @@
 % Usage: \makeletterclosing
 \newcommand*{\makeletterclosing}{%
   \vspace{3.4mm}
-  \lettertextstyle{\@letterclosing} \\\\
-  \letternamestyle{\@firstname\ \@lastname}
+  \lettertextstyle{\@letterclosing}\\
+  \vspace{1mm}\letternamestyle{\@firstname\ \@lastname}
   \ifthenelse{\isundefined{\@letterenclosure}}
     {\\}
     {%
