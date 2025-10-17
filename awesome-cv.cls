@@ -222,7 +222,7 @@
 \newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of eduction
-\newcommand*{\educationtitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{darktext} #1}}
+\newcommand*{\educationtitlestyle}[1]{{\fontsize{10.5pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 
 
 % For elements of honor
@@ -388,10 +388,10 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{0mm}
 
 % Others
-% \newcommand{\acvSectionTopSkip}{3.5mm}
-% \newcommand{\acvSectionContentTopSkip}{0mm}
-\newcommand{\acvSectionTopSkip}{0mm}
-\newcommand{\acvSectionContentTopSkip}{-1mm}
+\newcommand{\acvSectionTopSkip}{4mm}
+\newcommand{\acvSectionContentTopSkip}{0mm}
+% \newcommand{\acvSectionTopSkip}{0mm}
+% \newcommand{\acvSectionContentTopSkip}{-1mm}
 
 
 %-------------------------------------------------------------------------------
@@ -625,6 +625,7 @@
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 3cm} R{3cm}}
     \educationtitlestyle{#1} & \entrylocationstyle{#3} \\
     \entrypositionstyle{#2} & \entrydatestyle{#4} \\
+    \vspace{1mm}
     \descriptionstyle{#5}
   \end{tabular*}%
   \vspace{-2mm}
@@ -670,7 +671,7 @@
 \newenvironment{cvitems}{%
   \vspace{-4.5mm}
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, itemsep=.5mm]
+  \begin{itemize}[leftmargin=2ex, itemsep=.8mm]
     % \setlength\itemsep{.5mm}
     \renewcommand{\labelitemi}{\bullet}
 }{%
